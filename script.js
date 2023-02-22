@@ -2,15 +2,17 @@
 
 function getcompchoice(){
     return Math.floor(Math.random()*(3-1 +1)+1)
+    
 }
 
 
 function play(comp,player){
     player=player.toLowerCase()
-    
+    console.log(comp)
     switch(comp){
         case 1:
-            comp=='rock';
+            comp='rock';
+            
             break;
         case 2:
             comp='paper';
@@ -40,5 +42,11 @@ function play(comp,player){
 }  
 
 
-let result=play(getcompchoice(),'RoCk')
-console.log(result)
+
+function game(){
+    for (let i=0;i<5;i++){
+        input=prompt('enter rock paper or scissors: ')
+        console.log(play(getcompchoice(),input))
+    }
+}
+game()
